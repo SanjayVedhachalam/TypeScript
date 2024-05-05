@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Medical Store</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+</head>
+
+<body>
+    <script src="../JavaScript/index.js"></script>
+    <div id="Main" class="main">
+        <h3>Welcome</h3>
+        <button onclick="SignIn()" class="SignInAndUpButtons">SignIn</button><button onclick="SignUp()"
+            class="SignInAndUpButtons">SignUp</button>
+        <div id="SignIn" class="SignIn">
+            <label for="SignInEmailID">Email ID: </label><br><input type="email" id="SignInEmailID"
+                name="SignInEmailID"><br><br>
+            <label for="SignInPassword">Password: </label><br><input type="password" id="SignInPassword"
+                name="SignInPassword"><br><br>
+            <button class="SignInAndUpButtons" onclick="Enter()">Enter</button>
+            <button class="SignInAndUpButtons" onclick="SignInCancel()">Cancel</button>
+        </div>
+        <div id="SignUp" class="SignUp">
+            <label for="SignUpName">Name: </label><br><input type="email" id="SignUpName" name="SignUpName"><br><br>
+            <label for="SignUpEmailID">Email ID: </label><br><input type="email" id="SignUpEmailID"
+                name="SignUpEmailID"><br><br>
+            <label for="SignUpPassword">Password: </label><br><input type="password" id="SignUpPassword"
+                name="SignUpPassword"><br><br>
+            <label for="SignUpConfirmPassword">Confirm Password: </label><br><input type="password"
+                id="SignUpConfirmPassword" name="SignUpConfirmPassword"><br><br>
+            <label for="SignUpPhone">Phone: </label><br><input type="number" id="SignUpPhone"
+                name="SignUpPhone"><br><br>
+            <button class="SignInAndUpButtons" onclick="Confirm()">Confirm</button>
+            <button class="SignInAndUpButtons" onclick="SignUpCancel()">Cancel</button>
+        </div>
+    </div>
+
+    <div id="AfterLogin" class="AfterLogin">
+        <div class="NavigationBar">
+            <button class="NavButtons" id="Home" onclick="Greetings()">
+                <h4>Home</h4>
+            </button>
+            <button class="NavButtons" id="MedicineList" onclick="DisplayingMedicineList()">
+                <h4>Medicine List</h4>
+            </button>
+            <button class="NavButtons" id="TakeOrder" onclick="TakingOrder()">
+                <h4>Take Order</h4>
+            </button>
+            <button class="NavButtons" id="CancelOrder" onclick="CancellingOrder()">
+                <h4>Cancel Order</h4>
+            </button>
+            <button class="NavButtons" onclick="DisplayingOrderHistory()" id="OrderHistory">
+                <h4>Order History</h4>
+            </button>
+            <button class="NavButtons" id="TopUp" onclick="DisplayingWalletRecharge()">
+                <h4>Top Up</h4>
+            </button>
+            <button class="NavButtons" id="WalletBalanceButton" onclick="DisplayingWalletBalance()">
+                <h4>Wallet Balance</h4>
+            </button>
+        </div>
+        <div class="Greetings" id="Greetings">
+            <h2>Welcome, <span id="UserNameGreeting"></span></h2>
+        </div>
+        <div class="MedicineList" id="MedicineListDetails">
+            <div id="AddMedicine" class="AddMedicine">
+                <button onclick="AddingMedicine()">Add</button>
+            </div>
+            <table id="MedicineTable" border="1px"> 
+            </table>
+            <div id="NewMedicine" class="NewMedicine">
+                <label for="NewMedicineName">Medicine Name: <input type="text" id="NewMedicineName" name="NewMedicineName" placeholder="Enter new medicine name"></label><br><br>
+                <label for="NewMedicinePrice">Medicine Price: <input type="number" id="NewMedicinePrice" name="NewMedicinePrice" placeholder="Enter new medicine price"></label><br><br>
+                <label for="NewMedicineQuantity">Medicine Quantity: <input type="number" id="NewMedicineQuantity" name="NewMedicineQuantity" placeholder="Enter new medicine quantity"></label><br><br>
+                <button onclick="AddingMedicineToList()">Confirm</button><button ondblclick="NotShowingAdd()" onclick="CancellingMedicineToList()">Cancel</button>
+            </div>
+            <div id="EditMedicine" class="EditMedicine">
+                <label for="EditMedicineName">Medicine Name: <input type="text" id="EditMedicineName" name="EditMedicineName" placeholder="Enter new medicine name"></label><br><br>
+                <label for="EditMedicinePrice">Medicine Price: <input type="number" id="EditMedicinePrice" name="EditMedicinePrice" placeholder="Enter new medicine price"></label><br><br>
+                <label for="EditMedicineQuantity">Medicine Quantity: <input type="number" id="EditMedicineQuantity" name="EditMedicineQuantity" placeholder="Enter new medicine quantity"></label><br><br>
+                <button onclick="AddingEdittedMedicineToList()">Confirm</button><button ondblclick="NotShowingEdit()" onclick="CancellingEdittedMedicineToList()">Cancel</button>
+            </div>
+        </div>
+        <div class="WalletBalance" id="WalletBalance">
+            <h3>Your Current Balance is <span id="Balance"></span></h3>
+        </div>
+        <div class="WalletRecharge" id="WalletRecharge">
+            <label for="RechargeAmount">Recharge Amount: </label>
+            <input type="number" name="RechargeAmount" id="RechargeAmount"> <button onclick="RechargingWallet()">OK</button><br><br>
+            <label id="RechargeSuccess"></label>
+        </div>
+        <div class="TakeOrderDetails" id="TakeOrderDetails">
+            <table id="MedicineTableTakeOrder" border="1px" > 
+            </table>
+            <div id="PurchaseQuantityTab"><label for="PurchaseQuantity">Enter Purchase Quantity: <input type="number" name="PurchaseQuantity" id="PurchaseQuantity"></label></div>
+        </div>
+        <div class="OrderHistoryDetails" id="OrderHistoryDetails">
+            <label id="NoOrderHistory">You have not ordered anything.</label>
+            <table id="OrderHistoryDetailsTable" border="1px">
+
+            </table>
+        </div>
+        <div class="CancellingOrderDetails" id="CancellingOrderDetails">
+            <table id="CancellingOrderDetailsTable" border="1px">
+            </table>
+            <div id="CancelIDTab"><label for="CancelID">Enter the Order ID to be cancelled: </label><input type="text" name="CancelID" id="CancelID"></div>
+        </div>
+    </div>
+</body>
+
+</html>

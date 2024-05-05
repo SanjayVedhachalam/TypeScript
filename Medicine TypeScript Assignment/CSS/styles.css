@@ -1,0 +1,77 @@
+.SignUp{
+    display: none;
+}
+.SignInAndUpButtons{
+    padding: 0.5rem;
+    margin-left: 1rem;
+    margin-bottom: 0.2rem;
+}
+.main{
+    margin-left: 45%;
+    border: solid 0.1rem black;
+    padding: 1rem;
+    width: max-content;
+}
+.AfterLogin{
+    display: none;
+}
+.NavButtons{
+    width: 16.6%;
+    text-align: center;
+}
+.NavigationBar{
+    display: flex;
+    margin: 0;
+}
+.MedicineList{
+    display: none;
+    margin-top: 2rem;
+}
+.WalletBalance{
+    display: none;
+    margin-top: 2rem;
+}
+.WalletRecharge{
+    display: none;
+    margin-top: 2rem;
+}
+.MedicineTableTakeOrder{
+    display: none;
+    margin-top: 2rem;
+}
+#MedicineTableTakeOrder{
+    border-width: 100%;
+}
+.TakeOrderDetails{
+    width: fit-content;
+    margin-top: 2rem;
+}
+#PurchaseQuantityTab{
+    display: none;
+    margin-top: 2rem;
+}
+#OrderHistoryDetailsTable{
+    display: none;
+    margin-top: 2rem;
+    width: fit-content;
+}
+#NoOrderHistory{
+    display: none;
+}
+#CancellingOrderDetailsTable{
+    display: none;
+    margin-top: 2rem;
+    width: fit-content;
+}
+#CancelIDTab{
+    display: none;
+    margin-top: 2rem;
+}
+#NewMedicine{
+    display: none;
+    margin-top: 2rem;
+}
+#EditMedicine{
+    display: none;
+    margin-top: 2rem;
+}
