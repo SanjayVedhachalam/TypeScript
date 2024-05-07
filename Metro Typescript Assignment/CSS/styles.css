@@ -1,0 +1,57 @@
+.SignInSignUp{
+    border: solid 0.1rem black;
+    width: fit-content;
+    padding: 1.5rem;
+}
+.buttons{
+    padding: 0 1rem;
+    margin-left: 0.3rem;
+}
+.SignUpTab{
+    display: none;
+}
+#NavigationBar{
+    display: none;
+}
+.NavigationButtons{
+    width: 20%;
+    height: 3rem;
+
+}
+#HomeTab{
+    display: none;
+    margin-top: 1.5rem;
+}
+#TopUpTab{
+    display: none;
+    margin-top: 1.5rem;
+}
+#WalletBalanceTab{
+    display: none;
+    margin-top: 1.5rem;
+}
+#TravelListTab{
+    display: none;
+    margin-top: 1.5rem;
+}
+#NewTravelTab{
+    display: none;
+    margin-top: 1.5rem;
+}
+#EditTravelTab{
+    display: none;
+    margin-top: 1.5rem;
+}
+#BookingTravelTab{
+    display: none;
+    margin-top: 1.5rem;
+}
+#TravelHistoryTab{
+    display: none;
+    margin-top: 1.5rem;
+}
+#NoRidesTaken{
+    display: none;
+    margin-top: 1.5rem;
+}
+

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metro Card Management</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+</head>
+<body>
+    <script src="../JavaScript/index.js"></script>
+    <div class="main" id="main_page">
+        <div class="SignInSignUp" id="SignInSignUp">
+            <h4>Welcome to Metro Card Management</h4>
+            <button onclick="SignInTab()">SignIn</button>
+            <button onclick="SignUpTab()">SignUp</button><br><br>
+            <div class="SignInTab" id="SignInTab">
+                <label for="SignInEmail">Email:<br>
+                <input type="email" name="SignInEmail" id="SignInEmail"></label><br><br>
+                <label for="SignInPassword">Password:<br>
+                <input type="password" name="SignInPassword" id="SignInPassword"></label><br><br>
+                <button onclick="SigningIn()" class="buttons">Sign In</button><button class="buttons" onclick="SigningInCancel()">Cancel</button>
+            </div>
+            <div class="SignUpTab" id="SignUpTab">
+
+                <label for="SignUpName">Name:<br>
+                <input type="email" name="SignUpName" id="SignUpName"></label><br><br>
+                
+                <label for="SignUpEmail">Email:<br>
+                <input type="email" name="SignUpEmail" id="SignUpEmail"></label><br><br>
+                
+                <label for="SignUpPassword">Password:<br>
+                <input type="password" name="SignUpPassword" id="SignUpPassword"></label><br><br>
+                
+                <label for="SignUpConfirmPassword">Confirm Password:<br>
+                <input type="password" name="SignUpConfirmPassword" id="SignUpConfirmPassword"></label><br><br>
+                
+                <label for="SignUpPhone">Phone:<br>
+                <input type="number" name="SignUpPhone" id="SignUpPhone"></label><br><br>
+                
+                <label for="SignUpRechargeAmount">Wallet Recharge Amount:<br>
+                <input type="number" name="SignUpRechargeAmount" id="SignUpRechargeAmount"></label><br><br>
+                
+                <button onclick="SigningUp()" class="buttons">Sign Up</button><button class="buttons" onclick="SigningUpCancel()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="NavigationBar" id="NavigationBar">
+        <button class="NavigationButtons" onclick="HomeTabDetails()">Home</button>
+        <button class="NavigationButtons" onclick="TravelListDetailsTab()">Travel List</button>
+        <button class="NavigationButtons" onclick="BookTicketTabDetails()">Book Ticket</button>
+        <button class="NavigationButtons" onclick="TravelHistoryTabDetails()">View Travel History</button>
+        <button class="NavigationButtons" onclick="TopUpTabDetails()">Top Up</button>
+        <button class="NavigationButtons" onclick="WalletBalanceTabDetails()">Wallet Balance</button>
+    </div>
+
+    <div class="HomeTab" id="HomeTab">
+        <h3>Welcome, <span id="WelcomeCurrentUserName"></span></h3>
+    </div>
+
+    <div class="TopUpTab" id="TopUpTab">
+        <label for="RechargeAmount">Enter Recharge Amount: <input type="number" name="RechargeAmount" id="RechargeAmount"><button class="buttons" onclick="RechargingAmount()">Recharge</button><button class="buttons" onclick="CancelRechargingAmount()">Cancel</button></label>
+    </div>
+
+    <div class="WalletBalanceTab" id="WalletBalanceTab">
+        <h4>Wallet Balance: <span id="WalletBalanceAmount"></span></h4>
+    </div>
+
+    <div class="TravelListTab" id="TravelListTab">
+        <button onclick="AddNewTravel()">Add</button><br>
+        <table id="TravelListTable" border="1px">
+
+        </table>
+        <div class="NewTravelTab" id="NewTravelTab">
+            <label for="NewFromLocation">From Location: <input type="text" name="NewFromLocation" id="NewFromLocation" placeholder="Enter New From Location"></label><br><br>
+            <label for="NewToLocation">From Location: <input type="text" name="NewToLocation" id="NewToLocation" placeholder="Enter New To Location"></label><br><br>
+            <label for="NewPrice">From Location: <input type="text" name="NewPrice" id="NewPrice" placeholder="Enter New Price"></label><br><br>
+            <label for="AddingToList"><button onclick="AddingToList()">Add</button></label>
+            <label for="CancelAddingToList"><button ondblclick="NotShowEditAndAddTab()" onclick="CancelAddingToList()">Cancel</button></label>
+        </div>
+        <div class="EditTravelTab" id="EditTravelTab">
+            <label for="EditFromLocation">From Location: <input type="text" name="EditFromLocation" id="EditFromLocation" placeholder="Enter New From Location"></label><br><br>
+            <label for="EditToLocation">From Location: <input type="text" name="EditToLocation" id="EditToLocation" placeholder="Enter New To Location"></label><br><br>
+            <label for="EditPrice">From Location: <input type="text" name="EditPrice" id="EditPrice" placeholder="Enter New Price"></label><br><br>
+            <label for="EdittingToList"><button onclick="EdittingToList()">Confirm</button></label>
+            <label for="CancelEdittingToList"><button ondblclick="NotShowEditAndAddTab()" onclick="CancelEdittingToList()">Cancel</button></label>
+        </div>
+    </div>
+
+    <div class="BookingTravelTab" id="BookingTravelTab">
+        <table id="BookTravelTable" border="1px">
+
+        </table>
+    </div>
+
+    <div class="TravelHistoryTab" id="TravelHistoryTab">
+        <table id="TravelTable" border="1px">
+
+        </table>
+        <h3 id="NoRidesTaken">You have not taken any rides</h3>
+    </div>
+</body>
+</html>
